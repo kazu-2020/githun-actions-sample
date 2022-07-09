@@ -1,12 +1,11 @@
-import fetch from 'node-fetch';
-import { getInput, setFailed } from '@actions/core';
-import { context } from '@actions/github';
-import { Octokit } from '@octokit/core';
-import * as core from '@actions/core';
+const fetch = require('node-fetch');
+const core = require('@actions/core');
+const context = require('@actions/github');
+const Octokit = require('@octokit/core');
 
 async function run() {
   try {
-    const githubToken = getInput('github-token');
+    const githubToken = core.getInput('github-token');
     const octokit = new Octokit({ auth: githubToken });
 
     // switch (context.eventName) {
@@ -67,7 +66,7 @@ async function run() {
         }
       });
   } catch (error) {
-    setFailed(error.message);
+    core.setFailed(error.message);
   }
 }
 
