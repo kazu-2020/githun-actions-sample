@@ -15,6 +15,6 @@ jobs:
         uses: actions/checkout@v3
 
       - name: LGTM
-        uses: kazu-2020/githun-actions-sample
+        uses: kazu-2020/githun-actions-sample@tameshi1
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
