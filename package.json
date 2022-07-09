@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@octokit/action": "4.0.4"
+  }
+}
