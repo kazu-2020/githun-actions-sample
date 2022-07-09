@@ -1,3 +1,3 @@
 # githun-actions-sample
 
-テスト
+テスト!
